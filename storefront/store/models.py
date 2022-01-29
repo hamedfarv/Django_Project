@@ -17,6 +17,7 @@ class Collection(models.Model):
 
 class Product(models.Model): ##inheritaed from model class
     title = models.CharField(max_length=255)
+    slug = models.SlugField()
     desc = models.TextField()
     prce = models.DecimalField(max_digits=6 , decimal_places=2) # 9999.99
     inventory = models.IntegerField()
